@@ -49,7 +49,7 @@ const props = defineProps<{
 
         <p>{{ item.name }}</p>
       </div>
-      <!-- <p class="flex-1 border-b border-gray-300 pb-1">{{ item.name }}</p> -->
+
       <p :class="`flex-1 border-b text-center border-gray-300 pb-1 text-[${item.color}]`">
         {{ item.status }}
       </p>

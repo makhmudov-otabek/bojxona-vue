@@ -1,7 +1,4 @@
 <script setup lang="ts">
-// const value = 45
-// const bgColor =
-//   'repeating-linear-gradient(135deg, rgba(255,255,255,0.25) 0 10px, rgba(255,255,255,0) 10px 20px),linear-gradient(180deg,#f6c23e,#f1b21a)'
 const props = withDefaults(
   defineProps<{
     value: number

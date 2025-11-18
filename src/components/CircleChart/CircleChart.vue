@@ -41,8 +41,6 @@ const centerTextPlugin: Plugin<'doughnut'> = {
   },
 }
 
-// ChartJS.register(centerTextPlugin)
-
 const data: ChartData<'doughnut'> = {
   datasets: [
     {

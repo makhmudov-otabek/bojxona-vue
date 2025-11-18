@@ -39,8 +39,8 @@ const centerTextPlugin: Plugin<'doughnut'> = {
 const options = {
   responsive: true,
   maintainAspectRatio: false,
-  rotation: -90, // 0 daraja (chapdan start)
-  circumference: 180, // 180 daraja
+  rotation: -90,
+  circumference: 180,
   cutout: '55%',
   plugins: {
     legend: { display: false },

@@ -2,7 +2,7 @@
 <template>
   <div className="flex justify-between gap-10 p-4 bg-white">
     <div className="flex items-center gap-3 flex-1">
-      <button>
+      <button class="cursor-pointer">
         <svg
           xmlns="http://www.w3.org/2000/svg"
           width="24"
@@ -22,7 +22,7 @@
       </button>
       <div className="flex-1">
         <form className="flex items-center gap-2">
-          <label htmlFor="search">
+          <label htmlFor="search" class="cursor-pointer">
             <svg
               xmlns="http://www.w3.org/2000/svg"
               width="24"
@@ -51,7 +51,7 @@
     </div>
     <div className="flex items-center gap-3">
       <div>
-        <button>
+        <button class="cursor-pointer">
           <svg
             xmlns="http://www.w3.org/2000/svg"
             width="24"

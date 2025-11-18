@@ -108,7 +108,7 @@ const options = {
   gridPadding: 10,
   plugins: {
     legend: {
-      display: false, // ← shu yer
+      display: false,
     },
     customLabelsPlugin: {},
   },
