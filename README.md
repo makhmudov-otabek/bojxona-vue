@@ -2,6 +2,14 @@
 
 This template should help get you started developing with Vue 3 in Vite.
 
+> **⚠️ WARNING: The project requires a running JSON Server to load data.**  
+> The frontend does **not** include a built-in API.  
+> Make sure to start JSON Server manually before running the app:
+
+```bash
+npx json-server --watch src/data/db.json --port 3000
+
+
 ## Recommended IDE Setup
 
 [VS Code](https://code.visualstudio.com/) + [Vue (Official)](https://marketplace.visualstudio.com/items?itemName=Vue.volar) (and disable Vetur).
