@@ -6,6 +6,8 @@ import SideNav from './SideNav.vue'
 <template>
   <div class="flex">
     <SideNav />
-    <RouterView></RouterView>
+    <div class="flex justify-center w-full">
+      <RouterView></RouterView>
+    </div>
   </div>
 </template>

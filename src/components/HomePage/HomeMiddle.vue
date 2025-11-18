@@ -1,13 +1,5 @@
 <script setup lang="ts">
-import {
-  Chart as ChartJS,
-  ArcElement,
-  Tooltip,
-  Legend,
-  type Plugin,
-  type ChartOptions,
-  type ChartData,
-} from 'chart.js'
+import { Chart as ChartJS, ArcElement, Tooltip, Legend } from 'chart.js'
 import LineChart from './LineChart/LineChart.vue'
 import HalfPieChart from './HalfPieChart/HalfPieChart.vue'
 
@@ -89,8 +81,8 @@ const data = [
 ChartJS.register(ArcElement, Tooltip, Legend)
 </script>
 <template>
-  <div class="flex justify-between gap-4 p-4">
-    <div class="flex-9 p-5 py-4 rounded-md shadow-[0px_0px_10px_rgba(0,0,0,0.25)]">
+  <div class="flex justify-between gap-4 pt-4">
+    <div class="basis-8/12 p-5 py-4 rounded-md shadow-[0px_0px_10px_rgba(0,0,0,0.25)]">
       <div class="flex justify-between items-center mb-4">
         <p>O`tkazilgan auditlar soni</p>
         <div class="flex gap-6">
@@ -106,7 +98,7 @@ ChartJS.register(ArcElement, Tooltip, Legend)
       </div>
       <LineChart :data="data" />
     </div>
-    <div class="flex-3 p-5 py-4 rounded-md shadow-[0px_0px_10px_rgba(0,0,0,0.25)]">
+    <div class="basis-4/12 p-5 py-4 rounded-md shadow-[0px_0px_10px_rgba(0,0,0,0.25)]">
       <div class="flex justify-between items-center w-full">
         <p class="font-bold">Sayyor audit</p>
         <div class="rounded-full hover:bg-gray-200 duration-200 cursor-pointer w-9 h-9 p-2">

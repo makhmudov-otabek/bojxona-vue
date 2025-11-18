@@ -2,8 +2,8 @@
 import HalfCircle from './HalfCircleChart/HalfCircle.vue'
 </script>
 <template>
-  <div class="flex justify-between gap-4 p-4">
-    <div class="flex-9 p-5 py-4 rounded-md shadow-[0px_0px_10px_rgba(0,0,0,0.25)]">
+  <div class="w-full flex justify-between gap-4 pt-4">
+    <div class="basis-8/12 p-5 py-4 rounded-md shadow-[0px_0px_10px_rgba(0,0,0,0.25)]">
       <div class="flex-1">
         <div class="relative overflow-x-auto bg-neutral-primary-soft shadow-xs rounded-base">
           <div class="w-full">
@@ -106,7 +106,7 @@ import HalfCircle from './HalfCircleChart/HalfCircle.vue'
         </div>
       </div>
     </div>
-    <div class="flex-3 p-5 py-4 rounded-md shadow-[0px_0px_10px_rgba(0,0,0,0.25)]">
+    <div class="basis-4/12 p-5 py-4 rounded-md shadow-[0px_0px_10px_rgba(0,0,0,0.25)]">
       <div class="flex justify-between items-center w-ful">
         <p class="font-bold">Sayyor audit</p>
         <div class="rounded-full hover:bg-gray-200 duration-200 cursor-pointer w-9 h-9 p-2">

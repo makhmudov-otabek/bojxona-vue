@@ -1,0 +1,78 @@
+{
+  "riskSystems": {
+    "title": "Xavflarni boshqarish tizimlari",
+    "name": "Xavf yo`nalishi",
+    "statusName": "Xavf darajasi",
+    "progressName": "Ko`rsatgich",
+    "values": [
+      {
+        "id": 1,
+        "name": "Bojxona organi",
+        "status": "O`rta",
+        "color": "#f6c23e",
+        "value": 30,
+        "isValueVisible": false,
+        "flag": "https://imgs.search.brave.com/bv6l5H6a-6UufS7ji_kZYlUYxYoypUzIrY4WzxTj6lg/rs:fit:860:0:0:0/g:ce/aHR0cHM6Ly9jZG4uYnJpdGFubmljYS5jb20vODIvNDc4Mi0wNTAtODEyOTkwOUMvRmxhZy1UdXJrZXkuanBn",
+        "isFlagVisible": false
+      },
+      {
+        "id": 2,
+        "name": "Bojxona organi",
+        "status": "Past",
+        "color": "#009933",
+        "value": 70,
+        "isValueVisible": false,
+        "flag": "https://imgs.search.brave.com/bv6l5H6a-6UufS7ji_kZYlUYxYoypUzIrY4WzxTj6lg/rs:fit:860:0:0:0/g:ce/aHR0cHM6Ly9jZG4uYnJpdGFubmljYS5jb20vODIvNDc4Mi0wNTAtODEyOTkwOUMvRmxhZy1UdXJrZXkuanBn",
+        "isFlagVisible": false
+      },
+      {
+        "id": 3,
+        "name": "Bojxona organi",
+        "status": "Salbiy",
+        "value": 50,
+        "color": "#cc0000",
+        "isValueVisible": false,
+        "flag": "https://imgs.search.brave.com/bv6l5H6a-6UufS7ji_kZYlUYxYoypUzIrY4WzxTj6lg/rs:fit:860:0:0:0/g:ce/aHR0cHM6Ly9jZG4uYnJpdGFubmljYS5jb20vODIvNDc4Mi0wNTAtODEyOTkwOUMvRmxhZy1UdXJrZXkuanBn",
+        "isFlagVisible": false
+      }
+    ]
+  },
+  "customsClearance": {
+    "title": "Bojxona postlarida rasmiylashtiruv",
+    "name": "Post nomi",
+    "statusName": "BYUD soni",
+    "progressName": "Ulushi",
+    "values": [
+      {
+        "id": 1,
+        "name": "Bojxona organi",
+        "status": "O`rta",
+        "color": "#bbb",
+        "value": 30,
+        "isValueVisible": true,
+        "flag": "https://imgs.search.brave.com/bv6l5H6a-6UufS7ji_kZYlUYxYoypUzIrY4WzxTj6lg/rs:fit:860:0:0:0/g:ce/aHR0cHM6Ly9jZG4uYnJpdGFubmljYS5jb20vODIvNDc4Mi0wNTAtODEyOTkwOUMvRmxhZy1UdXJrZXkuanBn",
+        "isFlagVisible": false
+      },
+      {
+        "id": 2,
+        "name": "Bojxona organi",
+        "status": "Past",
+        "color": "#bbb",
+        "value": 70,
+        "isValueVisible": true,
+        "flag": "https://imgs.search.brave.com/bv6l5H6a-6UufS7ji_kZYlUYxYoypUzIrY4WzxTj6lg/rs:fit:860:0:0:0/g:ce/aHR0cHM6Ly9jZG4uYnJpdGFubmljYS5jb20vODIvNDc4Mi0wNTAtODEyOTkwOUMvRmxhZy1UdXJrZXkuanBn",
+        "isFlagVisible": false
+      },
+      {
+        "id": 3,
+        "name": "Bojxona organi",
+        "status": "Salbiy",
+        "value": 50,
+        "color": "#bbb",
+        "isValueVisible": true,
+        "flag": "https://imgs.search.brave.com/bv6l5H6a-6UufS7ji_kZYlUYxYoypUzIrY4WzxTj6lg/rs:fit:860:0:0:0/g:ce/aHR0cHM6Ly9jZG4uYnJpdGFubmljYS5jb20vODIvNDc4Mi0wNTAtODEyOTkwOUMvRmxhZy1UdXJrZXkuanBn",
+        "isFlagVisible": false
+      }
+    ]
+  }
+}

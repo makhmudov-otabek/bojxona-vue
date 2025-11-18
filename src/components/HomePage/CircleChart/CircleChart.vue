@@ -71,7 +71,7 @@ const options: ChartOptions<'doughnut'> = {
 </script>
 
 <template>
-  <div class="w-[120px] h-[90px] cursor-pointer">
+  <div class="w-[100px] h-[90px] cursor-pointer">
     <Doughnut :data="data" :options="options" class="w-full h-full" :plugins="[centerTextPlugin]" />
   </div>
 </template>

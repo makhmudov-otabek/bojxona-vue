@@ -5,7 +5,7 @@ import HomeMiddle from './HomePage/HomeMiddle.vue'
 </script>
 
 <template>
-  <section class="">
+  <section>
     <HomeHeader />
     <HomeMiddle />
     <HomeFooter />
