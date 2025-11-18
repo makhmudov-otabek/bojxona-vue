@@ -3,39 +3,29 @@ import { ref, onMounted, computed } from 'vue'
 import KompleksAuditCard from './KompleksAuditCard.vue'
 import axios from 'axios'
 
-type dataValuesType = {
-  id: number
-  name: string
-  status: string
-  color: string
-  value: number
-  isValueVisible: boolean
-  flag?: string
-  isFlagVisible: boolean
-}
+const data = ref([])
+const partners = ref([])
 
-type dataType = {
-  title: string
-  name: string
-  statusName: string
-  progressName: string
-  values: dataValuesType[]
-}
+onMounted(async () => {
+  const res = await axios.get('http://localhost:3000/customsClearance')
+  const partnersRes = await axios.get('http://localhost:3000/partners')
 
-const props = defineProps<{
-  data: dataType
-  customsClearance: dataType
-}>()
+  data.value = res.data
+  partners.value = partnersRes.data
+})
+
+const customsClearanceData = computed(() => data.value)
+const partnersData = computed(() => partners.value)
 </script>
 <template>
   <div className="flex justify-between gap-4 pt-4">
-    <div class="basis-4/12 p-3 rounded-md shadow-[0px_0px_7px_rgba(0,0,0,0.25)]">
-      <KompleksAuditCard :data="data" />
+    <div class="basis-4/12 bg-white p-3 rounded-md shadow-[0px_0px_7px_rgba(0,0,0,0.25)]">
+      <KompleksAuditCard :data="partnersData" />
     </div>
-    <div class="basis-4/12 p-3 rounded-md shadow-[0px_0px_7px_rgba(0,0,0,0.25)]">
-      <KompleksAuditCard :data="customsClearance" />
+    <div class="basis-4/12 bg-white p-3 rounded-md shadow-[0px_0px_7px_rgba(0,0,0,0.25)]">
+      <KompleksAuditCard :data="customsClearanceData" />
     </div>
-    <div class="basis-4/12 p-3 rounded-md shadow-[0px_0px_7px_rgba(0,0,0,0.25)]">
+    <div class="basis-4/12 bg-white p-3 rounded-md shadow-[0px_0px_7px_rgba(0,0,0,0.25)]">
       <p class="uppercase text-center text-(--secondary) font-bold mb-3">Ustav malumotlari</p>
       <div class="flex justify-between">
         <div class="flex-1 text-center border-r border-gray-300 p-2">

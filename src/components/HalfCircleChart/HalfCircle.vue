@@ -2,6 +2,19 @@
 import { Chart as ChartJS, ArcElement, Tooltip, Legend, type Plugin } from 'chart.js'
 import { Doughnut } from 'vue-chartjs'
 
+const props = withDefaults(
+  defineProps<{
+    width?: string
+    height?: string
+    radius?: number
+  }>(),
+  {
+    width: 'w-[250px]',
+    height: 'h-[200px]',
+    radius: 80,
+  },
+)
+
 const data = {
   labels: ['VueJs', 'EmberJs'],
   datasets: [
@@ -25,12 +38,11 @@ const centerTextPlugin: Plugin<'doughnut'> = {
 
     const x = width / 2
     const y = height / 1.7
-    const r = 80
 
     ctx.save()
 
     ctx.beginPath()
-    ctx.arc(x, y, r, 0, Math.PI * 2)
+    ctx.arc(x, y, props.radius, 0, Math.PI * 2)
     ctx.fillStyle = 'rgba(255, 205, 0, 0.7)'
     ctx.fill()
     ctx.closePath()
@@ -39,7 +51,7 @@ const centerTextPlugin: Plugin<'doughnut'> = {
     ctx.fillStyle = '#111827'
     ctx.textAlign = 'center'
     ctx.textBaseline = 'middle'
-    ctx.fillText(`12 ta`, x, y - 6)
+    ctx.fillText(`12 ta`, x, y)
     ctx.padding = '100px'
     ctx.font = '400 12px Inter, Arial'
     ctx.fillStyle = '#6b7280'
@@ -63,9 +75,9 @@ const options = {
 ChartJS.register(ArcElement, Tooltip, Legend)
 </script>
 <template>
-  <div class="w-[250px]">
+  <div :class="`${props.width}`">
     <Doughnut
-      class="h-[200px] w-full"
+      :class="`${props.height} w-full`"
       :data="data"
       :options="options"
       :plugins="[centerTextPlugin]"

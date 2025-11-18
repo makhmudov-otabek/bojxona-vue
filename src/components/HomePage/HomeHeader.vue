@@ -1,36 +1,31 @@
 <script setup lang="ts">
-import CircleChart from './CircleChart/CircleChart.vue'
+import { computed, onMounted, ref } from 'vue'
+import CircleChart from '../CircleChart/CircleChart.vue'
+import axios from 'axios'
 
-const data = [
-  {
-    name: 'Undirilgan',
-    value: 35,
-    fill: '#0099ff',
-    sum: '82mlrd',
-    label: '35%',
-  },
-  {
-    name: 'Nazoratda',
-    value: 35,
-    fill: '#ff9900',
-    sum: '44mlrd',
-    label: '35%',
-  },
-  {
-    name: 'Bartaraf etilgan',
-    value: 35,
-    fill: '#009999',
-    sum: '35mlrd',
-    label: '35%',
-  },
-]
+const data = ref([])
 
-// idx + 1 < data.length ? "border-r border-gray-300" : ""
+onMounted(async () => {
+  try {
+    const res = await axios.get('http://localhost:3000/auditData')
+    data.value = res.data
+    console.log('data', data.value)
+  } catch (error) {
+    console.log('Error:', error)
+  }
+})
+
+const auditData = computed(() => data.value)
 </script>
 <template>
   <div class="flex justify-between gap-4 pt-4">
-    <div class="basis-8/12 p-5 py-4 rounded-md shadow-[0px_0px_10px_rgba(0,0,0,0.25)] flex">
-      <div class="flex flex-col justify-between pr-4 border-r border-gray-300">
+    <div
+      class="basis-8/12 bg-white p-5 py-4 rounded-md shadow-[0px_0px_10px_rgba(0,0,0,0.25)] flex"
+    >
+      <div
+        v-if="auditData.length"
+        class="flex flex-col justify-between pr-4 border-r border-gray-300"
+      >
         <div class="flex gap-7 justify-between items-center">
           <p class="tex">Jami Summa</p>
           <svg
@@ -56,7 +51,7 @@ const data = [
       </div>
 
       <div
-        v-for="(item, index) in data"
+        v-for="(item, index) in auditData"
         v-bind:key="item.name"
         :class="[
           'flex pr-4 gap-1 mx-1 justify-center items-center, ',
@@ -71,7 +66,7 @@ const data = [
         </div>
       </div>
     </div>
-    <div class="basis-4/12 p-3 py-2 rounded-md shadow-[0px_0px_10px_rgba(0,0,0,0.25)]">
+    <div class="basis-4/12 bg-white p-3 py-2 rounded-md shadow-[0px_0px_10px_rgba(0,0,0,0.25)]">
       <div class="flex justify-between items-center w-full">
         <p class="font-bold">Sayyor audit</p>
         <div class="rounded-full hover:bg-gray-200 duration-200 cursor-pointer w-9 h-9 p-2">

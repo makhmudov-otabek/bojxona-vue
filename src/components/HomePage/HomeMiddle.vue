@@ -1,88 +1,32 @@
 <script setup lang="ts">
 import { Chart as ChartJS, ArcElement, Tooltip, Legend } from 'chart.js'
-import LineChart from './LineChart/LineChart.vue'
-import HalfPieChart from './HalfPieChart/HalfPieChart.vue'
+import LineChart from '.././LineChart/LineChart.vue'
+import HalfPieChart from '.././HalfPieChart/HalfPieChart.vue'
+import { computed, onMounted, ref } from 'vue'
+import axios from 'axios'
 
-const data = [
-  {
-    name: 'Yan',
-    uv: 0,
-    pv: 0,
-    amt: 2400,
-  },
-  {
-    name: 'Fev',
-    uv: 30,
-    pv: 18,
-    amt: 220,
-  },
-  {
-    name: 'Mar',
-    uv: 20,
-    pv: 90,
-    amt: 290,
-  },
-  {
-    name: 'Apr',
-    uv: 27,
-    pv: 38,
-    amt: 200,
-  },
-  {
-    name: 'May',
-    uv: 10,
-    pv: 40,
-    amt: 181,
-  },
-  {
-    name: 'Iyn',
-    uv: 20,
-    pv: 30,
-    amt: 2500,
-  },
-  {
-    name: 'Iyl',
-    uv: 10,
-    pv: 49,
-    amt: 2100,
-  },
-  {
-    name: 'Avg',
-    uv: 18,
-    pv: 40,
-    amt: 2181,
-  },
-  {
-    name: 'Sen',
-    uv: 20,
-    pv: 38,
-    amt: 2500,
-  },
-  {
-    name: 'Okt',
-    uv: 70,
-    pv: 40,
-    amt: 2100,
-  },
-  {
-    name: 'Noy',
-    uv: 25,
-    pv: 49,
-    amt: 200,
-  },
-  {
-    name: 'Dek',
-    uv: 34,
-    pv: 43,
-    amt: 300,
-  },
-]
+const data = ref([])
+
+onMounted(async () => {
+  try {
+    const res = await axios.get('http://localhost:3000/monthlyData')
+    data.value = res.data
+    console.log('data', data.value)
+  } catch (error) {
+    console.log('Error:', error)
+  }
+})
+
+const monthlyData = computed(() => data.value)
 
 ChartJS.register(ArcElement, Tooltip, Legend)
 </script>
 <template>
   <div class="flex justify-between gap-4 pt-4">
-    <div class="basis-8/12 p-5 py-4 rounded-md shadow-[0px_0px_10px_rgba(0,0,0,0.25)]">
+    <div
+      v-if="monthlyData.length"
+      class="basis-8/12 bg-white p-5 py-4 rounded-md shadow-[0px_0px_10px_rgba(0,0,0,0.25)]"
+    >
       <div class="flex justify-between items-center mb-4">
         <p>O`tkazilgan auditlar soni</p>
         <div class="flex gap-6">
@@ -96,9 +40,9 @@ ChartJS.register(ArcElement, Tooltip, Legend)
           </p>
         </div>
       </div>
-      <LineChart :data="data" />
+      <LineChart :data="monthlyData" />
     </div>
-    <div class="basis-4/12 p-5 py-4 rounded-md shadow-[0px_0px_10px_rgba(0,0,0,0.25)]">
+    <div class="basis-4/12 bg-white p-5 py-4 rounded-md shadow-[0px_0px_10px_rgba(0,0,0,0.25)]">
       <div class="flex justify-between items-center w-full">
         <p class="font-bold">Sayyor audit</p>
         <div class="rounded-full hover:bg-gray-200 duration-200 cursor-pointer w-9 h-9 p-2">

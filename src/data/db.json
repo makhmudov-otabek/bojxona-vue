@@ -12,7 +12,7 @@
         "color": "#f6c23e",
         "value": 30,
         "isValueVisible": false,
-        "flag": "https://imgs.search.brave.com/bv6l5H6a-6UufS7ji_kZYlUYxYoypUzIrY4WzxTj6lg/rs:fit:860:0:0:0/g:ce/aHR0cHM6Ly9jZG4uYnJpdGFubmljYS5jb20vODIvNDc4Mi0wNTAtODEyOTkwOUMvRmxhZy1UdXJrZXkuanBn",
+        "flag": "https://upload.wikimedia.org/wikipedia/commons/thumb/b/b4/Flag_of_Turkey.svg/250px-Flag_of_Turkey.svg.png",
         "isFlagVisible": false
       },
       {
@@ -22,7 +22,7 @@
         "color": "#009933",
         "value": 70,
         "isValueVisible": false,
-        "flag": "https://imgs.search.brave.com/bv6l5H6a-6UufS7ji_kZYlUYxYoypUzIrY4WzxTj6lg/rs:fit:860:0:0:0/g:ce/aHR0cHM6Ly9jZG4uYnJpdGFubmljYS5jb20vODIvNDc4Mi0wNTAtODEyOTkwOUMvRmxhZy1UdXJrZXkuanBn",
+        "flag": "https://upload.wikimedia.org/wikipedia/commons/thumb/b/b4/Flag_of_Turkey.svg/250px-Flag_of_Turkey.svg.png",
         "isFlagVisible": false
       },
       {
@@ -32,7 +32,7 @@
         "value": 50,
         "color": "#cc0000",
         "isValueVisible": false,
-        "flag": "https://imgs.search.brave.com/bv6l5H6a-6UufS7ji_kZYlUYxYoypUzIrY4WzxTj6lg/rs:fit:860:0:0:0/g:ce/aHR0cHM6Ly9jZG4uYnJpdGFubmljYS5jb20vODIvNDc4Mi0wNTAtODEyOTkwOUMvRmxhZy1UdXJrZXkuanBn",
+        "flag": "https://upload.wikimedia.org/wikipedia/commons/thumb/b/b4/Flag_of_Turkey.svg/250px-Flag_of_Turkey.svg.png",
         "isFlagVisible": false
       }
     ]
@@ -50,7 +50,7 @@
         "color": "#bbb",
         "value": 30,
         "isValueVisible": true,
-        "flag": "https://imgs.search.brave.com/bv6l5H6a-6UufS7ji_kZYlUYxYoypUzIrY4WzxTj6lg/rs:fit:860:0:0:0/g:ce/aHR0cHM6Ly9jZG4uYnJpdGFubmljYS5jb20vODIvNDc4Mi0wNTAtODEyOTkwOUMvRmxhZy1UdXJrZXkuanBn",
+        "flag": "https://upload.wikimedia.org/wikipedia/commons/thumb/b/b4/Flag_of_Turkey.svg/250px-Flag_of_Turkey.svg.png",
         "isFlagVisible": false
       },
       {
@@ -60,7 +60,7 @@
         "color": "#bbb",
         "value": 70,
         "isValueVisible": true,
-        "flag": "https://imgs.search.brave.com/bv6l5H6a-6UufS7ji_kZYlUYxYoypUzIrY4WzxTj6lg/rs:fit:860:0:0:0/g:ce/aHR0cHM6Ly9jZG4uYnJpdGFubmljYS5jb20vODIvNDc4Mi0wNTAtODEyOTkwOUMvRmxhZy1UdXJrZXkuanBn",
+        "flag": "https://upload.wikimedia.org/wikipedia/commons/thumb/b/b4/Flag_of_Turkey.svg/250px-Flag_of_Turkey.svg.png",
         "isFlagVisible": false
       },
       {
@@ -70,9 +70,159 @@
         "value": 50,
         "color": "#bbb",
         "isValueVisible": true,
-        "flag": "https://imgs.search.brave.com/bv6l5H6a-6UufS7ji_kZYlUYxYoypUzIrY4WzxTj6lg/rs:fit:860:0:0:0/g:ce/aHR0cHM6Ly9jZG4uYnJpdGFubmljYS5jb20vODIvNDc4Mi0wNTAtODEyOTkwOUMvRmxhZy1UdXJrZXkuanBn",
+        "flag": "https://upload.wikimedia.org/wikipedia/commons/thumb/b/b4/Flag_of_Turkey.svg/250px-Flag_of_Turkey.svg.png",
         "isFlagVisible": false
       }
     ]
-  }
+  },
+  "partners": {
+    "title": "Bojxona postlarida rasmiylashtiruv",
+    "name": "Post nomi",
+    "statusName": "BYUD soni",
+    "progressName": "Ulushi",
+    "values": [
+      {
+        "id": 1,
+        "name": "Turkiya",
+        "status": "999 999 999",
+        "color": "#bbb",
+        "value": 30,
+        "isValueVisible": true,
+        "flag": "https://upload.wikimedia.org/wikipedia/commons/thumb/b/b4/Flag_of_Turkey.svg/250px-Flag_of_Turkey.svg.png",
+        "isFlagVisible": true
+      },
+      {
+        "id": 2,
+        "name": "Turkiya",
+        "status": "999 999 999",
+        "color": "#bbb",
+        "value": 70,
+        "isValueVisible": true,
+        "flag": "https://upload.wikimedia.org/wikipedia/commons/thumb/b/b4/Flag_of_Turkey.svg/250px-Flag_of_Turkey.svg.png",
+        "isFlagVisible": true
+      },
+      {
+        "id": 3,
+        "name": "Tojikiston",
+        "status": "999 999 999",
+        "value": 50,
+        "color": "#bbb",
+        "isValueVisible": true,
+        "flag": "https://upload.wikimedia.org/wikipedia/commons/thumb/d/d0/Flag_of_Tajikistan.svg/250px-Flag_of_Tajikistan.svg.png",
+        "isFlagVisible": true
+      }
+    ]
+  },
+  "monthlyData": [
+    {
+      "id": 1,
+      "name": "Yan",
+      "uv": 0,
+      "pv": 0,
+      "amt": 2400
+    },
+    {
+      "id": 2,
+      "name": "Fev",
+      "uv": 30,
+      "pv": 18,
+      "amt": 220
+    },
+    {
+      "id": 3,
+      "name": "Mar",
+      "uv": 20,
+      "pv": 90,
+      "amt": 290
+    },
+    {
+      "id": 4,
+      "name": "Apr",
+      "uv": 27,
+      "pv": 38,
+      "amt": 200
+    },
+    {
+      "id": 5,
+      "name": "May",
+      "uv": 10,
+      "pv": 40,
+      "amt": 181
+    },
+    {
+      "id": 6,
+      "name": "Iyn",
+      "uv": 20,
+      "pv": 30,
+      "amt": 2500
+    },
+    {
+      "id": 7,
+      "name": "Iyl",
+      "uv": 10,
+      "pv": 49,
+      "amt": 2100
+    },
+    {
+      "id": 8,
+      "name": "Avg",
+      "uv": 18,
+      "pv": 40,
+      "amt": 2181
+    },
+    {
+      "id": 9,
+      "name": "Sen",
+      "uv": 20,
+      "pv": 38,
+      "amt": 2500
+    },
+    {
+      "id": 10,
+      "name": "Okt",
+      "uv": 70,
+      "pv": 40,
+      "amt": 2100
+    },
+    {
+      "id": 11,
+      "name": "Noy",
+      "uv": 25,
+      "pv": 49,
+      "amt": 200
+    },
+    {
+      "id": 12,
+      "name": "Dek",
+      "uv": 59,
+      "pv": 43,
+      "amt": 300
+    }
+  ],
+  "auditData": [
+    {
+      "id": 1,
+      "name": "Undirilgan",
+      "value": 35,
+      "fill": "#0099ff",
+      "sum": "82mlrd",
+      "label": "35%"
+    },
+    {
+      "id": 2,
+      "name": "Nazoratda",
+      "value": 75,
+      "fill": "#ff9900",
+      "sum": "44mlrd",
+      "label": "35%"
+    },
+    {
+      "id": 3,
+      "name": "Bartaraf etilgan",
+      "value": 95,
+      "fill": "#009999",
+      "sum": "35mlrd",
+      "label": "35%"
+    }
+  ]
 }

@@ -16,6 +16,8 @@ type ChartPoint = { name: string; uv: number; pv: number; amt: number }
 
 const props = defineProps<{ data: ChartPoint[] }>()
 
+console.log('props.data', props.data)
+
 const yearlyData = {
   labels: [
     'Yanvar',

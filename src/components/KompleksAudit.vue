@@ -3,16 +3,23 @@ import { ref, onMounted, computed } from 'vue'
 import KompleksAuditCard from './KompleksAudit/KompleksAuditCard.vue'
 import axios from 'axios'
 import KompleksAuditMiddle from './KompleksAudit/KompleksAuditMiddle.vue'
+import KompleksAuditFooter from './KompleksAudit/KompleksAuditFooter.vue'
 
 const data = ref([])
 const customsClearance = ref([])
 
 onMounted(async () => {
-  const res = await axios.get('http://localhost:3000/riskSystems')
-  const resCustomsClearance = await axios.get('http://localhost:3000/customsClearance')
+  try {
+    const [res, resCustomsClearance] = await Promise.all([
+      axios.get('http://localhost:3000/riskSystems'),
+      axios.get('http://localhost:3000/customsClearance'),
+    ])
 
-  data.value = res.data
-  customsClearance.value = resCustomsClearance.data
+    data.value = res.data
+    customsClearance.value = resCustomsClearance.data
+  } catch (error) {
+    console.error('API error:', error)
+  }
 })
 
 console.log('users', data)
@@ -69,16 +76,14 @@ const customsData = computed(() => customsClearance.value)
       </ol>
     </div>
     <div className="flex justify-between gap-4 pt-4">
-      <div class="basis-4/12 p-3 rounded-md shadow-[0px_0px_7px_rgba(0,0,0,0.25)]">
+      <div class="basis-4/12 bg-white p-3 rounded-md shadow-[0px_0px_7px_rgba(0,0,0,0.25)]">
         <KompleksAuditCard :data="riskData" />
       </div>
-      <div class="basis-4/12 p-3 rounded-md shadow-[0px_0px_7px_rgba(0,0,0,0.25)]">
+      <div class="basis-4/12 bg-white p-3 rounded-md shadow-[0px_0px_7px_rgba(0,0,0,0.25)]">
         <KompleksAuditCard :data="customsData" />
       </div>
-      <!-- <div class="basis-4/12 p-3 rounded-md shadow-[0px_0px_7px_rgba(0,0,0,0.25)]">
-        <KompleksAuditCard />
-      </div> -->
-      <div class="basis-4/12 p-3 rounded-md shadow-[0px_0px_7px_rgba(0,0,0,0.25)]">
+
+      <div class="basis-4/12 bg-white p-3 rounded-md shadow-[0px_0px_7px_rgba(0,0,0,0.25)]">
         <p class="uppercase text-center text-(--secondary) font-bold mb-3">Bojxona to`lovlari</p>
         <div class="flex justify-between">
           <div
@@ -128,5 +133,6 @@ const customsData = computed(() => customsClearance.value)
       </div>
     </div>
     <KompleksAuditMiddle :data="riskData" :customsClearance="customsClearance" />
+    <KompleksAuditFooter :data="riskData" :customsClearance="customsClearance" />
   </div>
 </template>
